@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Conference Registration</title>
+ <style>
+        body {
+            background-color: #f0f0; /* Light Gray */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ggg; /* White */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft Shadow */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select, input[type="text"], input[type="number"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4CSF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+    </style>
+</head>
+<body>
+    <h1>International Conference Registration</h1>
+    <form action="registration_process.php" method="POST">
+        <label for="name">Name:</label><br><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="country">Country:</label><br><br>
+        <select id="country" name="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="CHINA">CHINA</option>
+            <option value="NORTH AMERCIA">NORTH AMERCIA</option>
+            <option value="KOREA">KOREA</option>
+        </select><br><br>
+  
+        <label for="participant_type">Participant Type:</label><br><br>
+        <select id="participant_type" name="participant_type">
+            <option value="Student">Student</option>
+            <option value="Faculty Member">Faculty Member</option>
+            <option value="Professional">Professional</option>
+            <option value="Company/Firm Representative">Company/Firm Representative</option>
+       
+        </select><br><br>
+        <label for="registration_fee">Registration Fee:</label><br><br>
+        <input type="number" id="registration_fee" name="registration_fee" required><br>
+        
+        <label for="currency">Currency:</label><br>
+        <select id="currency" name="currency">
+            <option value="Rupees">Rupees</option>
+            <option value="Dollar">Dollar</option>
+        </select><br><br>
+        
+        <label for="payment_method">Payment Method:</label><br><br>
+        <input type="radio" id="credit_card" name="payment_method" value="Credit Card" required>
+        <label for="credit_card">Credit Card</label><br>
+        <input type="radio" id="debit_card" name="payment_method" value="Debit Card">
+        <label for="debit_card">Debit Card</label><br>
+        <input type="radio" id="demand_draft" name="payment_method" value="Demand Draft">
+        <label for="demand_draft">Demand Draft</label><br><br>
+    
+        <label for="accommodation">Accommodation:</label><br><br>
+        <select id="accommodation" name="accommodation">
+            <option value="Hotel A">Hotel A</option>
+            <option value="Hotel B">Hotel B</option>
+            <option value="Hotel C">Hotel C</option>
+            <option value="Hotel D">Hotel D</option>
+        </select><br><br>
+    
+        <label for="services">Services:</label><br><br>
+        <input type="checkbox" id="wifi" name="services[]" value="WiFi">
+        <label for="wifi">WiFi</label><br>
+        <input type="checkbox" id="breakfast" name="services[]" value="Breakfast">
+        <label for="breakfast">Breakfast</label><br>
+        <input type="checkbox" id="pool_access" name="services[]" value="Pool Access">
+        <label for="pool_access">Pool Access</label><br>
+        <input type="checkbox" id="gym_access" name="services[]" value="Gym Access">
+        <label for="gym_access">Gym Access</label><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+
+
